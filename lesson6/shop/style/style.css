@@ -83,7 +83,7 @@ img {
 }
 
 .invisible{
-    display: block;
+    display: none;
 }
 .cart-block:before{
     content: '';
