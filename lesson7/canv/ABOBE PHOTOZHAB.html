@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>ABOBE PHOTOZHAB</title>
+	<script src="https://kit.fontawesome.com/f8c361c747.js"></script>
+	<style type="text/css">
+		#canv {
+
+			width: 1000px;
+			height: 800px;
+			border: 1px solid black;
+			 box-shadow:15px 10px 30px 9px rgba(0,0,0,0.61);
+			 -webkit-box-shadow:15px 10px 30px 9px rgba(0,0,0,0.61);
+			 -moz-box-shadow:15px 10px 30px 9px rgba(0,0,0,0.61);
+		}
+		.container{
+			width: 1050px;
+			margin: 0 auto;
+		}
+		.canv{
+			margin: 0 auto;
+			display: flex;
+			position: relative;
+			z-index: 1;
+		}
+		.tools{
+			margin-top: 20px;
+			position: relative;
+			z-index: 2;
+			width: 50px;
+			display: flex;
+			flex-direction: column;
+		}
+		.tool-button{
+			margin-bottom: 5px;
+			padding: 5px;
+			font-size: 15px;
+			border-left: none;
+			border-top-right-radius: 10px;
+			transition: all 0.3s;
+			outline: none;
+		}
+		.tool-button:hover{
+			background-color: azure;
+		}
+		.tool-button-active{
+			background-color: azure;
+			transform: translateX(-1041px) rotate(-90deg);
+			border-top-left-radius: 10px;
+		}
+		.coordinates{
+			width: 200px;
+			position: absolute;
+			top: 783px;
+			left: -590px;
+			background-color: azure;
+			display: flex;
+			justify-content: space-between;
+
+		}
+		.coordinates p {
+			margin: 10px;
+		}
+		.date{
+			font-size: 30px;
+			color: darkblue;
+		}
+	</style>
+</head>
+<body>
+<div class="container">
+	<div class="canv">
+		<canvas id="canv" width="1000" height="800"></canvas>
+		<div class="tools">
+			<button class="tool-button" id='pencil'><i class="fas fa-pencil-alt"></i></button>
+			<button class="tool-button" id='brush'><i class="fas fa-paint-brush"></i></button>
+			<button class="tool-button" id='spray'><i class="fas fa-spray-can"></i></button>
+			<button class="tool-button" id='eraser'><i class="fas fa-eraser"></i></button>
+			<button class="tool-button" id='fill'><i class="fas fa-fill-drip"></i></button>
+			<select id='size-select'>
+				<option>5</option>
+				<option>10</option>
+				<option>15</option>
+				<option>20</option>
+			</select>
+			<input type="color" id="color">
+			<div class="coordinates">
+				<p id="x"><b>x: </b> <span id="xCoord"></span></p>
+				<p id="y"><b>y: </b> <span id="yCoord"></span></p>
+				<br>
+			</div>
+		</div>
+
+	</div>
+	<div class="date"></div>
+</div>
+
+
+
+
+
+
+
+	<script src="script.js"></script>
+</body>
+</html>
